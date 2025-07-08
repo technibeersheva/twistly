@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Twistly - Signup</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/auth.js"></script>
+</head>
+<body>
+  <header>TWISTLY</header>
+  <main class="container">
+    <section id="signup-section" class="auth-section">
+      <h1>Create an account</h1>
+      <form id="signup-form">
+        <label for="signup-email">Email:</label>
+        <input id="signup-email" type="email" required placeholder="you@example.com" />
+        <label for="signup-password">Password:</label>
+        <input id="signup-password" type="password" required placeholder="••••••••" />
+        <label for="signup-username">Username:</label>
+        <input id="signup-username" type="text" required placeholder="Your username" />
+        <label for="signup-bio">Bio:</label>
+        <textarea id="signup-bio" placeholder="Tell something about yourself"></textarea>
+        <label for="signup-pfp">Profile Picture URL:</label>
+        <input id="signup-pfp" type="url" placeholder="https://example.com/image.jpg" />
+        <button type="submit">Sign Up</button>
+      </form>
+      <p>Already have an account? <a href="index.html">Log in here</a></p>
+    </section>
+  </main>
+</body>
+</html>

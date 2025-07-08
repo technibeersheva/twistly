@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Twistly - Profile</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/profile.js"></script>
+  <script defer src="js/auth.js"></script>
+</head>
+<body>
+  <header>
+    <div class="header-left">TWISTLY</div>
+    <nav>
+      <a href="feed.html" title="Feed">Feed</a>
+      <a href="upload.html" title="Upload">Upload</a>
+      <a href="messages.html" title="Messages">Messages</a>
+      <a href="#" id="logout-btn" title="Logout">Logout</a>
+    </nav>
+  </header>
+  <main class="container">
+    <section id="profile-section">
+      <h1>Your Profile</h1>
+      <div class="profile-info">
+        <img id="profile-pfp" src="" alt="Profile Picture" />
+        <div id="profile-username"></div>
+        <div id="profile-bio"></div>
+      </div>
+      <form id="edit-profile-form">
+        <label for="edit-username">Username:</label>
+        <input id="edit-username" type="text" required />
+        <label for="edit-bio">Bio:</label>
+        <textarea id="edit-bio"></textarea>
+        <label for="edit-pfp">Profile Picture URL:</label>
+        <input id="edit-pfp" type="url" />
+        <button type="submit">Save Changes</button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>

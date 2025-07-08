@@ -1,0 +1,394 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #1e0a3c;
+  color: #eee;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background: #37005a;
+  padding: 1rem 2rem;
+  color: #ff00aa;
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0.2em;
+  user-select: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .header-left {
+  font-weight: 900;
+  font-size: 1.6rem;
+  color: #ff33cc;
+}
+
+nav a {
+  color: #ff66cc;
+  margin-left: 1.2rem;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: #ff99dd;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  flex-grow: 1;
+  max-width: 480px;
+  margin: 1rem auto 3rem;
+  padding: 0 1rem;
+  width: 100%;
+}
+
+.auth-section,
+#upload-section,
+#profile-section,
+#feed-section,
+#messages-section,
+#guest-feed-section {
+  background-color: #2a1066;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 0 20px #50007f88;
+}
+
+h1 {
+  margin-bottom: 1rem;
+  color: #ff66cc;
+  text-align: center;
+  font-weight: 700;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin: 0.8rem 0 0.3rem;
+  font-weight: 600;
+  color: #ff99dd;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="url"],
+textarea {
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  border: none;
+  background: #3e1a7d;
+  color: #eee;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="url"]:focus,
+textarea:focus {
+  outline: none;
+  box-shadow: 0 0 5px #ff33cc;
+  background: #4a2299;
+}
+
+button {
+  margin-top: 1.5rem;
+  padding: 0.8rem;
+  background: linear-gradient(45deg, #ff33cc, #ff00aa);
+  border: none;
+  border-radius: 25px;
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  user-select: none;
+}
+
+button:hover {
+  background: linear-gradient(45deg, #ff00aa, #ff33cc);
+}
+
+p {
+  margin-top: 1rem;
+  color: #d996c6;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+p a {
+  color: #ff99dd;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+p a:hover {
+  text-decoration: underline;
+}
+
+/* Feed Post */
+
+.post {
+  background: #3e1a7d;
+  margin-bottom: 1.5rem;
+  border-radius: 15px;
+  padding: 1rem;
+  box-shadow: 0 0 15px #50007faa;
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+.post-header img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 1rem;
+  border: 2px solid #ff66cc;
+}
+
+.post-header .username {
+  font-weight: 700;
+  color: #ff66cc;
+  font-size: 1.1rem;
+}
+
+.post-image,
+.post-video {
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 0.8rem;
+  background: black;
+}
+
+.post-image {
+  max-height: 350px;
+  object-fit: cover;
+}
+
+.post-video {
+  max-height: 350px;
+  background: black;
+}
+
+/* Comments */
+
+.comments {
+  margin-top: 0.8rem;
+  border-top: 1px solid #6e3cb1;
+  padding-top: 0.5rem;
+}
+
+.comment {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.comment strong {
+  color: #ff99dd;
+}
+
+.comment-text {
+  margin-left: 0.4rem;
+  color: #d0a9d6;
+}
+
+.comment-form {
+  display: flex;
+  margin-top: 0.6rem;
+}
+
+.comment-form input {
+  flex-grow: 1;
+  padding: 0.4rem 0.8rem;
+  border-radius: 15px 0 0 15px;
+  border: none;
+  background: #4a2299;
+  color: #eee;
+  font-size: 0.9rem;
+}
+
+.comment-form button {
+  border-radius: 0 15px 15px 0;
+  padding: 0 1rem;
+  font-weight: 700;
+  background: #ff33cc;
+  border: none;
+  cursor: pointer;
+}
+
+.comment-form button:hover {
+  background: #ff00aa;
+}
+
+/* Emoji reactions */
+
+.reactions {
+  margin-top: 0.5rem;
+}
+
+.reaction-btn {
+  font-size: 1.2rem;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  margin-right: 0.5rem;
+  transition: transform 0.15s ease;
+}
+
+.reaction-btn:hover {
+  transform: scale(1.3);
+}
+
+.reaction-count {
+  margin-left: 0.2rem;
+  font-size: 0.9rem;
+  color: #ff99dd;
+}
+
+/* Messaging */
+
+#conversations-list {
+  max-height: 300px;
+  overflow-y: auto;
+  border: 1px solid #6e3cb1;
+  border-radius: 10px;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.conversation-item {
+  padding: 0.5rem;
+  border-bottom: 1px solid #6e3cb1;
+  cursor: pointer;
+  color: #d996c6;
+}
+
+.conversation-item:hover {
+  background-color: #4a2299;
+}
+
+#chat-window {
+  border: 1px solid #6e3cb1;
+  border-radius: 10px;
+  padding: 1rem;
+  max-height: 400px;
+  display: flex;
+  flex-direction: column;
+  background: #3e1a7d;
+}
+
+#chat-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+#chat-header button {
+  margin-right: 1rem;
+  cursor: pointer;
+  background: #ff33cc;
+  border: none;
+  border-radius: 10px;
+  padding: 0.3rem 0.6rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+#chat-messages {
+  flex-grow: 1;
+  overflow-y: auto;
+  margin-bottom: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.chat-message {
+  margin-bottom: 0.5rem;
+  padding: 0.4rem 0.6rem;
+  border-radius: 10px;
+  background: #4a2299;
+  max-width: 70%;
+  color: #eee;
+  font-size: 0.9rem;
+}
+
+.chat-message.self {
+  background: #ff33cc;
+  color: #fff;
+  margin-left: auto;
+}
+
+/* Profile */
+
+.profile-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.profile-info img {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  margin-right: 1rem;
+  border: 3px solid #ff66cc;
+  object-fit: cover;
+}
+
+#profile-username {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ff66cc;
+}
+
+#profile-bio {
+  font-style: italic;
+  margin-top: 0.2rem;
+  color: #d996c6;
+  max-width: 250px;
+}
+
+/* Utility */
+
+.hidden {
+  display: none !important;
+}
+
+/* Responsive */
+
+@media (max-width: 480px) {
+  .container {
+    margin: 1rem 0.5rem 3rem;
+  }
+  nav a {
+    margin-left: 0.8rem;
+    font-size: 0.9rem;
+  }
+}
